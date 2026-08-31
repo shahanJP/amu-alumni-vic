@@ -107,44 +107,12 @@ h3 {
     justify-content: space-between;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.brand-mark {
-    width: 50px;
-    height: 50px;
-
-    display: grid;
-    place-items: center;
-
-    background: var(--light-green);
-    border: 2px solid var(--green);
-    border-radius: 50%;
-
-    color: var(--green);
-    font-family: Georgia, serif;
-    font-weight: 700;
-}
-
-.brand strong {
-    display: block;
-
-    color: var(--green);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 21px;
-}
-
-.brand small {
-    display: block;
-
-    color: var(--red);
-    font-size: 10px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-}
 .brand-logo{
     width:60px;
     height:60px;
@@ -154,6 +122,23 @@ h3 {
 
 .brand-text{
     display:block;
+}
+
+.brand-text strong{
+    display:block;
+
+    color:var(--green);
+    font-family:"Playfair Display", Georgia, serif;
+    font-size:21px;
+}
+
+.brand-text small{
+    display:block;
+
+    color:var(--red);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 .nav-menu {
     display: flex;
