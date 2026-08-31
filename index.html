@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aligarh Muslim University Alumni Victoria community website">
+  <title>AMU Alumni Victoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="#home" aria-label="AMU Alumni Victoria home">
+        <span class="brand-mark">AMU</span>
+        <span><strong>AMU Alumni Victoria</strong><small>Melbourne, Australia</small></span>
+      </a>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#committee">Committee</a>
+        <a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#membership">Membership</a><a href="#contact">Contact</a>
+        <a class="button button-red nav-join" href="#membership">Join AMUAV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/founder.jpg">
+        <source src="Video/amu-history.mp4" type="video/mp4">
+      </video>
+      <div class="hero-fallback"></div><div class="hero-overlay"></div><div class="hero-fade"></div>
+      <div class="container hero-inner">
+        <div class="hero-card reveal">
+          <p class="eyebrow">Welcome to our alumni community</p>
+          <h1>From Aligarh to Victoria, our connection continues.</h1>
+          <p class="lead">Connecting alumni, preserving our shared legacy and creating opportunities for generations of AMU graduates across Victoria.</p>
+          <div class="actions"><a class="button button-red" href="#membership">Become a Member <span>→</span></a><a class="button button-outline" href="#events">Explore Events</a></div>
+        </div>
+      </div>
+      <a class="scroll-down" href="#about" aria-label="Scroll to About">⌄</a>
+    </section>
+
+    <section id="about" class="section white-section">
+      <div class="container split">
+        <div class="founder-wrap reveal">
+          <img src="images/founder.jpg" alt="Founder of the Aligarh movement" class="founder-image">
+          <div class="founder-caption"><strong>A vision through education</strong><span>The legacy that continues</span></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Our heritage</p><h2>A connected community with a proud legacy.</h2>
+          <p>Aligarh Muslim University Alumni Victoria brings together AMU graduates, former students, families and friends living across Victoria. We reconnect alumni, share knowledge, welcome new arrivals and contribute to the wider community.</p>
+          <p>Guided by education, social responsibility, mutual respect and service, our community honours its heritage while building a forward-looking network in Australia.</p>
+          <div class="feature-grid"><div>Professional networking</div><div>Student and newcomer support</div><div>Cultural celebrations</div><div>Community service</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section rose-section">
+      <div class="container"><div class="section-heading"><p class="eyebrow">What's on</p><h2>Upcoming programs and events</h2><p>Reconnect with old friends, meet new members and participate in professional, cultural and community activities.</p></div>
+        <div class="card-grid">
+          <article class="event-card reveal"><div class="event-top"><span class="date"><strong>17</strong><small>OCT</small></span><span>Melbourne • 6:30 PM</span></div><div class="card-body"><h3>Sir Syed Day Celebration</h3><p>An evening celebrating the educational vision and enduring legacy of AMU's founder.</p><a href="#contact">Event details →</a></div></article>
+          <article class="event-card reveal"><div class="event-top"><span class="date"><strong>08</strong><small>NOV</small></span><span>Melbourne CBD • 5:30 PM</span></div><div class="card-body"><h3>Alumni Networking Evening</h3><p>Meet alumni across industries, exchange ideas and build meaningful professional connections.</p><a href="#contact">Event details →</a></div></article>
+          <article class="event-card reveal"><div class="event-top"><span class="date"><strong>14</strong><small>DEC</small></span><span>Victoria • 11:00 AM</span></div><div class="card-body"><h3>AMUAV Family Picnic</h3><p>A relaxed community gathering for alumni, families, students and friends of AMU.</p><a href="#contact">Event details →</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="membership" class="section green-section">
+      <div class="container"><div class="section-heading"><p class="eyebrow">Membership</p><h2>More than a network. A community for life.</h2><p>Stay connected to people, opportunities, events and initiatives that carry the AMU spirit forward in Victoria.</p></div>
+        <div class="benefit-grid"><article><span>◎</span><h3>Connect</h3><p>Build lasting personal and professional relationships across Victoria.</p></article><article><span>◇</span><h3>Mentor</h3><p>Support students, new graduates and newly arrived alumni.</p></article><article><span>♡</span><h3>Contribute</h3><p>Take part in educational, cultural and community initiatives.</p></article><article><span>◉</span><h3>Belong</h3><p>Celebrate shared heritage in a welcoming local community.</p></article></div>
+        <div class="interest-box"><h3>Register your interest</h3><p>Enter your email and our membership team can contact you with the next steps.</p><form id="interest-form"><input id="interest-email" type="email" placeholder="Your email address" required><button class="button button-red" type="submit">Join the community</button></form><p id="interest-message" class="form-message" aria-live="polite"></p></div>
+      </div>
+    </section>
+
+    <section id="committee" class="section white-section"><div class="container"><div class="section-heading"><p class="eyebrow">Leadership</p><h2>Meet the executive committee</h2><p>A volunteer committee supporting the association's purpose, programs and community.</p></div><div class="committee-grid">
+      <article><div class="portrait">1</div><h3>President</h3><p>Committee member name</p></article><article><div class="portrait">2</div><h3>Vice President</h3><p>Committee member name</p></article><article><div class="portrait">3</div><h3>General Secretary</h3><p>Committee member name</p></article><article><div class="portrait">4</div><h3>Treasurer</h3><p>Committee member name</p></article>
+    </div></div></section>
+
+    <section id="gallery" class="section rose-section"><div class="container"><div class="section-heading"><p class="eyebrow">Community moments</p><h2>Heritage and community gallery</h2><p>A visual journey from historic Aligarh to our alumni community in Victoria.</p></div><div class="gallery-grid"><div class="gallery-item tall green">Historic AMU</div><div class="gallery-item red">Campus architecture</div><div class="gallery-item green">Sir Syed Day</div><div class="gallery-item tall red">Victoria community</div><div class="gallery-item green">Student mentoring</div></div></div></section>
+
+    <section id="contact" class="section white-section"><div class="container split contact-split"><div><p class="eyebrow">Contact us</p><h2>Stay connected with AMU Alumni Victoria.</h2><p>Have a membership question, an event idea or an opportunity for the community? We would love to hear from you.</p><ul class="contact-list"><li>✉ <a href="mailto:info@amuav.org.au">info@amuav.org.au</a></li><li>⌖ Melbourne, Victoria, Australia</li></ul><div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a></div></div>
+      <form id="contact-form" class="contact-form"><div class="two-fields"><input name="firstName" placeholder="First name" required><input name="lastName" placeholder="Last name" required></div><input type="email" name="email" placeholder="Email address" required><textarea name="message" placeholder="How can we help?" required></textarea><button class="button button-red" type="submit">Send message</button><p id="contact-message" class="form-message" aria-live="polite"></p></form>
+    </div></section>
+  </main>
+
+  <footer><div class="container footer-top"><div><strong>AMU Alumni Victoria</strong><p>Connecting alumni. Preserving legacy. Building futures.</p></div><a href="#home">Back to top ↑</a></div><div class="container footer-bottom"><span>© 2026 AMU Alumni Victoria. All rights reserved.</span><span>Melbourne, Victoria, Australia</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
