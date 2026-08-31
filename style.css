@@ -7,40 +7,62 @@
 @media(max-width:950px){.menu-button{display:block}.nav-menu{display:none;position:absolute;left:0;right:0;top:82px;flex-direction:column;align-items:stretch;padding:15px 20px 23px;background:#fff;border-bottom:1px solid #efd9d6}.nav-menu.open{display:flex}.nav-menu a{padding:8px}.nav-join{text-align:center}.split{grid-template-columns:1fr;gap:55px}.card-grid{grid-template-columns:1fr}.benefit-grid,.committee-grid{grid-template-columns:1fr 1fr}.hero-card{max-width:680px}.section{padding:80px 0}}
 @media(max-width:610px){.container{width:min(100% - 28px,1180px)}.brand strong{font-size:17px}.brand small{letter-spacing:1.4px}.hero,.hero-inner{min-height:650px}.hero-card{padding:26px 21px}.section{padding:68px 0}.benefit-grid,.committee-grid,.feature-grid,.two-fields{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:190px}.gallery-item.tall{grid-row:span 1}.interest-box form{flex-direction:column}.footer-top,.footer-bottom{flex-direction:column;text-align:center;align-items:center}}
 
-/* PARALLAX COMMITTEE SECTION */
+/* Committee Parallax */
 
 .committee-parallax{
     position:relative;
     background-image:url('AMU.jpg');
-    background-attachment:fixed;
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    padding:120px 0;
     min-height:700px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .committee-parallax::before{
     content:'';
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     background:rgba(255,255,255,0.85);
 }
 
 .committee-content{
     position:relative;
     z-index:2;
-    width:90%;
     max-width:1200px;
+    margin:auto;
+}
+
+.committee-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:50px;
+}
+
+.committee-grid article{
+    background:white;
+    border-radius:20px;
+    padding:30px;
     text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 
-.committee-content h2{
-    margin-bottom:20px;
+.committee-grid article:hover{
+    transform:translateY(-5px);
 }
 
-.committee-content p{
-    margin-bottom:40px;
+@media(max-width:950px){
+    .committee-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .committee-grid{
+        grid-template-columns:1fr;
+    }
 }
