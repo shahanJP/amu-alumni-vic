@@ -211,30 +211,25 @@
    COMPACT RESPONSIVE FOOTER
 =================================== */
 
-footer{
-    padding:8px 0;
-    background:#075f47;
-    color:#fff;
-    border-top:4px solid #a33f46;
-}
-
 .acknowledgement-country{
     display:flex;
     align-items:center;
-    gap:5px;
+    gap:6px;
 }
 
 .acknowledgement-image{
-    width:10px;
-    height:10px;
+    width:14px !important;
+    height:14px !important;
     object-fit:cover;
     border-radius:2px;
+    flex-shrink:0;
 }
 
 .acknowledgement-text{
-    font-size:9px;
-    font-style:italic;
+    font-size:9px !important;
+    font-style:italic !important;
     color:#dceae3;
+    line-height:1.2;
 }
 
 .footer-top{
@@ -242,22 +237,13 @@ footer{
     justify-content:space-between;
     align-items:center;
     padding:4px 0;
-    border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-.footer-top a{
-    color:#ffd8d5;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:700;
 }
 
 .footer-bottom{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding-top:6px;
-    font-size:12px;
+    font-size:10px;
+    padding-top:4px;
 }
 
 @media(max-width:700px){
