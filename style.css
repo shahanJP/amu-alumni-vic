@@ -88,82 +88,174 @@ h3 {
    HEADER AND NAVIGATION
 =================================== */
 
+/* ===================================
+   SLIM WEBSITE HEADER
+=================================== */
+
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid #f1dedd;
-    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
     backdrop-filter: blur(10px);
 }
 
 .nav-wrap {
-    min-height: 82px;
+    min-height: 84px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
+/* Logo and organisation name */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+    text-decoration: none;
 }
 
-.brand-logo{
-    width:60px;
-    height:60px;
-    object-fit:contain;
-    flex-shrink:0;
+/* Small logo, similar to Image 1 */
+
+.brand-logo {
+    display: block;
+
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 50%;
 }
 
-.brand-text{
-    display:block;
+/* Text beside the logo */
+
+.brand-text {
+    display: block;
 }
 
-.brand-text strong{
-    display:block;
+.brand-text strong {
+    display: block;
 
-    color:var(--green);
-    font-family:"Playfair Display", Georgia, serif;
-    font-size:21px;
+    color: var(--green);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
-.brand-text small{
-    display:block;
+.brand-text small {
+    display: block;
 
-    color:var(--red);
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+    margin-top: 5px;
+
+    color: var(--red);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
+
+/* Desktop navigation */
+
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 25px;
+    justify-content: flex-end;
+    gap: 27px;
 }
 
 .nav-menu > a:not(.button) {
+    position: relative;
+
+    padding: 31px 0;
+
+    color: #26343d;
     font-size: 14px;
     font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
 }
 
-.nav-menu > a:hover {
-    color: var(--red);
+.nav-menu > a:not(.button)::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: 21px;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
 }
+
+.nav-menu > a:not(.button):hover {
+    color: var(--green);
+}
+
+.nav-menu > a:not(.button):hover::after {
+    transform: scaleX(1);
+}
+
+/* Join button */
+
+.nav-join {
+    min-height: 46px;
+    padding: 12px 25px;
+
+    background: var(--red);
+    color: #ffffff;
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-join:hover {
+    background: var(--green);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Mobile menu button */
 
 .menu-button {
     display: none;
 
+    padding: 8px;
+
     background: transparent;
     border: 0;
-
     color: var(--green);
+
     cursor: pointer;
     font-size: 28px;
+    line-height: 1;
 }
 
 
