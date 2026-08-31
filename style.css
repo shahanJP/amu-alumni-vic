@@ -211,62 +211,65 @@
    COMPACT RESPONSIVE FOOTER
 =================================== */
 
-   /* Compact acknowledgement */
+footer{
+    padding:8px 0;
+    background:#075f47;
+    color:#fff;
+    border-top:4px solid #a33f46;
+}
 
 .acknowledgement-country{
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:6px;
-
-    padding:4px 0;
-    margin:0;
+    gap:5px;
 }
 
 .acknowledgement-image{
-    width:12px;
-    height:12px;
+    width:10px;
+    height:10px;
     object-fit:cover;
     border-radius:2px;
-    flex-shrink:0;
 }
 
 .acknowledgement-text{
     font-size:9px;
     font-style:italic;
-    color:#d8ebe1;
-    line-height:1;
+    color:#dceae3;
 }
 
-/* Footer title */
-
-.footer-top strong{
-    font-size:12px;
-    font-weight:400;
-    color:white;
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:4px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
-
-/* Back to top */
 
 .footer-top a{
+    color:#ffd8d5;
+    text-decoration:none;
     font-size:12px;
     font-weight:700;
 }
 
-/* Copyright */
-
 .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     padding-top:6px;
-    font-size:10px;
+    font-size:12px;
 }
 
-/* Reduce footer spacing */
+@media(max-width:700px){
 
-.footer-top{
-    padding:6px 0;
-}
+    .footer-top,
+    .footer-bottom{
+        flex-direction:column;
+        gap:6px;
+        text-align:center;
+    }
 
-footer{
-    padding-top:6px;
-    padding-bottom:6px;
+    .acknowledgement-text{
+        font-size:8px;
+    }
 }
