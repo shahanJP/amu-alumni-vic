@@ -790,25 +790,52 @@ h3 {
     color: var(--green);
 }
 
-.socials {
-    margin-top: 24px;
+/* Facebook link */
 
-    display: flex;
-    gap: 10px;
+.socials {
+    display: fl*x;
+    align-items: center;
+    ma*gin-top: 24px;
 }
 
-.socials a {
-    width: 44px;
-    height: 44px;
+.socials .facebo*k-link {
+    width: 52px;
+    heig*t: 52px;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    a*ign-items: center;
+    justify-con*ent: center;
 
-    background: var(--green);
-    border-radius: 50%;
+    background: #075*47;
+    border: 2px solid #075f47;*    border-radius: 50%;
 
-    color: var(--white);
-    font-weight: 800;
+    color* #ffffff;
+    font-family: Arial, *ans-serif;
+    font-size: 28px;
+  * font-weight: 800;
+    line-height* 1;
+    text-decoration: none;
+
+  * box-shadow: 0 8px 22px rgba(7, 95* 71, 0.18);
+
+    transition:
+     *  transform 0.25s ease,
+        ba*kground-color 0.25s ease,
+        *order-color 0.25s ease,
+        bo*-shadow 0.25s ease;
+}
+
+.socials .f*cebook-link:hover {
+    transform:*scale(1.2);
+
+    background: #a33f*6;
+    border-color: #a33f46;
+
+   *box-shadow: 0 12px 28px rgba(163, *3, 70, 0.28);
+}
+
+.socials .faceboo*-link:focus-visible {
+    outline:*3px solid rgba(163, 63, 70, 0.35);*    outline-offset: 4px;
 }
 
 .contact-form {
