@@ -206,4 +206,17 @@
     .committee-parallax .committee-grid article {
         padding: 30px 20px;
     }
+
+   .acknowledgement-country{
+    max-width:900px;
+    margin:0 auto 25px auto;
+    text-align:center;
+    line-height:1.7;
+    color:#dceae3;
+    font-size:14px;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,.15);
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
 }
