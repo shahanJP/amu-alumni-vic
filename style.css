@@ -242,6 +242,8 @@ h3 {
 .hero-video {
     z-index: 0;
     object-fit: cover;
+   filter: blur(4px) brightness(.8);
+   transform: scale(1.05);
 }
 
 .hero-fallback {
