@@ -7,62 +7,203 @@
 @media(max-width:950px){.menu-button{display:block}.nav-menu{display:none;position:absolute;left:0;right:0;top:82px;flex-direction:column;align-items:stretch;padding:15px 20px 23px;background:#fff;border-bottom:1px solid #efd9d6}.nav-menu.open{display:flex}.nav-menu a{padding:8px}.nav-join{text-align:center}.split{grid-template-columns:1fr;gap:55px}.card-grid{grid-template-columns:1fr}.benefit-grid,.committee-grid{grid-template-columns:1fr 1fr}.hero-card{max-width:680px}.section{padding:80px 0}}
 @media(max-width:610px){.container{width:min(100% - 28px,1180px)}.brand strong{font-size:17px}.brand small{letter-spacing:1.4px}.hero,.hero-inner{min-height:650px}.hero-card{padding:26px 21px}.section{padding:68px 0}.benefit-grid,.committee-grid,.feature-grid,.two-fields{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr;grid-auto-rows:190px}.gallery-item.tall{grid-row:span 1}.interest-box form{flex-direction:column}.footer-top,.footer-bottom{flex-direction:column;text-align:center;align-items:center}}
 
-/* Committee Parallax */
 
-.committee-parallax{
-    position:relative;
-    background-image:url('AMU.jpg');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    padding:120px 0;
-    min-height:700px;
+/* ===================================
+   EXECUTIVE COMMITTEE PARALLAX
+=================================== */
+
+.committee-parallax {*    position: relative;
+    isolat*on: isolate;
+    min-height: 700px*
+    padding: 110px 20px;
+
+    background-image: url("AMU.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.committee-parallax::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(255,255,255,0.85);
+/* Balanced overlay so the image stays visible */
+.committee-parallax::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 61, 50, 0.65),
+            rgba(5, 61, 50, 0.38),
+            rgba(103, 35, 41, 0.48)
+        );
 }
 
-.committee-content{
-    position:relative;
-    z-index:2;
-    max-width:1200px;
-    margin:auto;
+/* Main content */
+.committee-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    text-align: center;
 }
 
-.committee-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-top:50px;
+/* Heading area */
+.committee-parallax .section-heading {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 26px 35px;
+
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 24px;
+    box-shadow: 0 14px 40px rgba(5, 61, 50, 0.22);
+    backdrop-filter: blur(8px);
 }
 
-.committee-grid article{
-    background:white;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+.committee-parallax .section-heading .eyebrow {
+    margin-bottom: 10px;
+    color: #a33f46;
+    font-weight: 800;
+    letter-spacing: 4px;
 }
 
-.committee-grid article:hover{
-    transform:translateY(-5px);
+.committee-parallax .section-heading h2 {
+    margin-bottom: 14px;
+    color: #053d32;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.1;
 }
 
-@media(max-width:950px){
-    .committee-grid{
-        grid-template-columns:repeat(2,1fr);
+.committee-parallax .section-heading p:last-child {
+    margin: 0;
+    color: #26343d;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Committee layout */
+.committee-parallax .committee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 0;
+}
+
+/* Bright card styling */
+.committee-parallax .committee-grid article {
+    position: relative;
+    overflow: hidden;
+
+    padding: 34px 24px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.97);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-top: 5px solid #a33f46;
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px rgba(5, 35, 29, 0.28),
+        0 3px 10px rgba(5, 35, 29, 0.14);
+
+    backdrop-filter: blur(8px);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Small green accent at bottom */
+.committee-parallax .committee-grid article::after {
+    content: "";
+    position: absolute;
+    right: 25%;
+    bottom: 0;
+    left: 25%;
+
+    height: 4px;
+    border-radius: 4px 4px 0 0;
+    background: #075f47;
+}
+
+/* Card hover */
+.committee-parallax .committee-grid article:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 26px 55px rgba(5, 35, 29, 0.34),
+        0 5px 15px rgba(5, 35, 29, 0.16);
+}
+
+/* Number circle */
+.committee-parallax .portrait {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px;
+
+    display: grid;
+    place-items: center;
+
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    background: #d9f0e4;
+
+    color: #075f47;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 24px rgba(5, 61, 50, 0.20),
+        0 0 0 2px rgba(7, 95, 71, 0.12);
+}
+
+/* Card titles */
+.committee-parallax .committee-grid article h3 {
+    margin: 0 0 8px;
+    color: #053d32;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Committee member names */
+.committee-parallax .committee-grid article p {
+    margin: 0;
+    color: #536169;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .committee-parallax {
+        background-attachment: scroll;
+        padding: 90px 20px;
+    }
+
+    .committee-parallax .committee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media(max-width:600px){
-    .committee-grid{
-        grid-template-columns:1fr;
+/* Mobile */
+@media (max-width: 600px) {
+    .committee-parallax {
+        min-height: auto;
+        padding: 70px 15px;
+    }
+
+    .committee-parallax .section-heading {
+        padding: 24px 18px;
+    }
+
+    .committee-parallax .committee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .committee-parallax .committee-grid article {
+        padding: 30px 20px;
     }
 }
